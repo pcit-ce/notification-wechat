@@ -7,15 +7,12 @@ namespace PCIT\Notification\WeChat;
 use App\Build;
 use App\Repo;
 use PCIT\Framework\Support\Date;
+use PCIT\GPI\Support\Git;
 use PCIT\Notification\Interfaces\HandlerInterface;
 use PCIT\PCIT;
-use PCIT\Support\Git;
 
 class Handler implements HandlerInterface
 {
-    /**
-     * @throws \Exception
-     */
     public static function send(int $build_key_id, string $info): void
     {
         $pcit = new PCIT();
